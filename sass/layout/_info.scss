@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+@use "../components/card" as *;
+
+.info {
+    height: 120vh;
+    background-image: linear-gradient( to bottom right, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url(../../img/nat-4.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+    padding: 5rem $padding-sides;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-box {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

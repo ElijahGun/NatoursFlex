@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as *;
+
+.card {
+    width: 22%;
+    background-color: $color-grey-light-2;
+    border-radius: 2px;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 2rem;
+    transition: all .2s ease;
+
+    &__title {
+        text-transform: uppercase;
+        color: $color-grey-dark;
+        margin: 1.5rem 0;
+        font-size: 1.7rem;
+    }
+
+    &__p {
+        color: $color-grey-dark;
+    }
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.1);
+    }
+}
+
+.svg {
+    height: 20%;
+    margin-bottom: 1.5rem;
+}

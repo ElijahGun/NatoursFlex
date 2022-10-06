@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+.composition {
+    height: 0;
+    width: 50%;
+    position: relative;
+    transition: all .2s ease;
+
+    &:hover &__image:not(:hover) {
+        transform: scale(.9);
+    }
+
+    &__image {
+        width: 55%;
+        border-radius: 3px;
+        box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+        position: absolute;
+        background-size: cover;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            outline: 1.3rem solid $color-primary;
+            outline-offset: 1.4rem;
+            z-index: 5;
+        }
+
+        &--1 {
+            top: -2rem;
+        }
+
+        &--2 {
+            right: 1rem;
+            top: 2.7rem;
+        }
+
+        &--3 {
+            top: 9rem;
+            left: 20%;
+        }
+    }
+}

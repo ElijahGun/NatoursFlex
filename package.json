@@ -1,0 +1,14 @@
+{
+  "name": "natoursflex",
+  "version": "1.0.0",
+  "description": "Flexbox implementation from scratch of Natours project",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss:css/styles.css"
+  },
+  "author": "Elijah Gundorin",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

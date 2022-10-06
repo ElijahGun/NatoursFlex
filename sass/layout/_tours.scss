@@ -1,0 +1,36 @@
+@use "../components/heading" as *;
+@use "../abstracts/variables" as *;
+@use "../components/composition" as *;
+
+.tours {
+    padding: 5rem $padding-sides;
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__text-box {
+        width: 50%;
+        padding: 0 2rem;
+    }
+
+    &__heading--h4 {
+        color: $color-grey-dark;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        color: $color-grey-dark;
+        margin-bottom: 2.5rem;
+    }
+
+    .composition {
+
+    }
+}

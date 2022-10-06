@@ -1,0 +1,251 @@
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  padding: 3rem;
+  background-color: white;
+}
+
+.main {
+  background-color: #f7f7f7;
+}
+
+.btn-round {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.75rem 3rem;
+  border-radius: 100px;
+}
+.btn-round--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn-square {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1.5px solid #55c57a;
+  color: #55c57a;
+  transition: transform 0.2s ease;
+}
+.btn-square:hover {
+  background-color: #55c57a;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transform: translateY(-0.25rem);
+}
+.btn-square:active {
+  transform: translateY(-0.1rem);
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+.header__logo {
+  height: 4rem;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+.header__textbox {
+  text-align: center;
+  width: fit-content;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.header__title {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+.header__title--main {
+  font-size: 6.25rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  display: block;
+  margin-right: -3.5rem;
+}
+.header__title--sub {
+  font-weight: 600;
+  font-size: 2rem;
+  word-spacing: 1rem;
+  letter-spacing: 1.5rem;
+  display: block;
+  margin-right: -1.5rem;
+}
+.header__btn {
+  position: relative;
+  transition: all 0.2s;
+}
+.header__btn::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  z-index: -1;
+  transition: all 0.2s;
+}
+.header__btn:hover {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.35rem);
+}
+.header__btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.header__btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  font-size: 3rem;
+  word-spacing: 0.8rem;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+}
+.heading-primary:hover {
+  cursor: pointer;
+  transform: skew(15deg, 3deg);
+}
+
+.composition {
+  height: 0;
+  width: 50%;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.composition:hover .composition__image:not(:hover) {
+  transform: scale(0.9);
+}
+.composition__image {
+  width: 55%;
+  border-radius: 3px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  position: absolute;
+  background-size: cover;
+  transition: all 0.2s ease;
+}
+.composition__image:hover {
+  transform: scale(1.1);
+  outline: 1.3rem solid #55c57a;
+  outline-offset: 1.4rem;
+  z-index: 5;
+}
+.composition__image--1 {
+  top: -2rem;
+}
+.composition__image--2 {
+  right: 1rem;
+  top: 2.7rem;
+}
+.composition__image--3 {
+  top: 9rem;
+  left: 20%;
+}
+
+.tours {
+  padding: 5rem 15rem;
+}
+.tours__heading {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.tours__container {
+  display: flex;
+}
+.tours__text-box {
+  width: 50%;
+  padding: 0 2rem;
+}
+.tours__heading--h4 {
+  color: #777;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.tours__text {
+  color: #777;
+  margin-bottom: 2.5rem;
+}
+.card {
+  width: 22%;
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: all 0.2s ease;
+}
+.card__title {
+  text-transform: uppercase;
+  color: #777;
+  margin: 1.5rem 0;
+  font-size: 1.7rem;
+}
+.card__p {
+  color: #777;
+}
+.card:hover {
+  transform: translateY(-1rem) scale(1.1);
+}
+
+.svg {
+  height: 20%;
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  height: 120vh;
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+  padding: 5rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-box {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+@use "../components/button" as *;
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient( to bottom right, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
+    url(../../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    position: relative;
+
+    &__logo {
+        height: 4rem;
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+    }
+
+    &__textbox {
+        text-align: center;
+        width: fit-content;
+       //background-color: aqua;
+        position: relative;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        
+    }
+
+    &__title {
+        color: $color-white;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 7rem;
+
+        &--main{
+            font-size: 6.25rem;
+            font-weight: 400;
+            letter-spacing: 3.5rem;
+            display: block;
+            margin-right: -3.5rem;
+        }
+
+        &--sub {
+            font-weight: 600;
+            font-size: 2rem;
+            word-spacing: 1rem;
+            letter-spacing: 1.5rem;
+            display: block;
+            margin-right: -1.5rem;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        transition: all .2s;
+
+        &::after {
+            display: inline-block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color-white;
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+            z-index: -1;
+            transition: all .2s;
+        }
+
+
+        &:hover {
+            box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
+            transform: translateY(-.35rem);
+
+            &::after {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+
+        }
+
+        &:active {
+            transform: translateY(-.1rem);
+            box-shadow: 0 .2rem .2rem rgba(0,0,0,.2);
+        }
+
+
+    }
+
+}
