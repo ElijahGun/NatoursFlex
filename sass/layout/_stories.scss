@@ -1,0 +1,95 @@
+@use "../abstracts/variables" as *;
+
+.stories {
+    padding: 15rem 0;
+    position: relative;
+    z-index: 0;
+
+
+    &__heading {
+        margin-bottom: 9rem;
+    }
+
+    &__vid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        opacity: .15;
+        object-fit: cover;
+    }
+
+}
+.story {
+    background-color: rgba(255,255,255, .8);
+    width: 55%;
+    margin: 0 auto;
+    padding: 6rem;
+    padding-left: 9rem;
+    transform: skewX(-12deg);
+    margin-bottom: 9rem;
+
+    &:hover &__img {
+        filter: blur(3px) brightness(.8);
+    }
+
+    &:hover &__fig--caption {
+        opacity: 1;
+        transform: translateY(-4.5rem);
+    }
+
+
+    &__fig {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+        clip-path: circle();
+        shape-outside: ellipse(45.01% 35.13% at 85px 82px);            float: left;
+        transform: translateX(-3rem) skewX(12deg);
+        transition: all .5s;
+
+        &--caption {
+            color: $color-white;
+            font-weight: 600;
+            font-size: 2rem;
+            position: absolute;
+            top: 8.25rem;
+            left: 5.25rem;
+            width: 4rem;
+            opacity: 0;
+            transition: all .5s;
+        }
+    }
+
+    &__img {
+        height: 100%;
+        transition: all .5s;
+    }
+
+    &__heading {
+        color: $color-grey-dark;
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+        transform: skewX(12deg);
+    }
+
+    &__text {
+        color: $color-grey-dark;
+        transform: skewX(12deg);
+    }
+
+    &__btn {
+        position: relative;
+        left: 50%;
+        transform:  translateX(-50%);
+
+        &:hover {
+            transform: translateX(-50%) translateY(-.25rem);
+        }
+    }
+
+
+}
+
